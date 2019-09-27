@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="context1">
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+            <property name="addRemarkComments" value="false" />
+        </commentGenerator>
+        <jdbcConnection
+                connectionURL="jdbc:mysql://localhost:3306/book"
+                driverClass="com.mysql.jdbc.Driver"
+                password="123456"
+                userId="root"/>
+        <javaModelGenerator targetPackage="com.example.demo.model.po" targetProject="tt"/>
+        <sqlMapGenerator targetPackage="com.example.demo.dao" targetProject="tt"/>
+        <javaClientGenerator targetPackage="com.example.demo.dao" targetProject="tt"
+                             type="XMLMAPPER"/>
+        <table tableName="sales"
+               domainObjectName="Sales" mapperName="SalesMapper"
+               enableSelectByPrimaryKey="true" enableSelectByExample="false"
+               enableInsert="false" enableCountByExample="false"
+               enableUpdateByPrimaryKey="true" enableUpdateByExample="false"
+               enableDeleteByPrimaryKey="true" enableDeleteByExample="false">
+            	<property name="useActualColumnNames" value="true"/>
+        </table>
+    </context>
+</generatorConfiguration>
